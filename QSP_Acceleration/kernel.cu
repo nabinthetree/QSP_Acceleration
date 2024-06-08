@@ -17,6 +17,8 @@ int main(void)
     
     Test_fAdd();
     Test_fSub();
-   
+    Test_Multiply();
+
+    
     return 0;
 }

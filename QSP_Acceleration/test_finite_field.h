@@ -11,6 +11,7 @@ void Test_fAdd();
 
 void Test_fSub();
 
+void Test_Multiply();
 
 
 

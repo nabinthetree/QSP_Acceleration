@@ -110,3 +110,22 @@ void Test_fSub()
     free(out);
 
 }
+
+void Test_Multiply()
+{
+    const u8 in1[32] = { 35 };
+    const u8 in2[32] = { 128 };
+    Finite_Field_255_19 a(in1);
+    Finite_Field_255_19 b(in2);
+
+    i64 sol = 35 * 128;
+
+    Finite_Field_255_19 c = a * b;
+    assert(a.GetValue()[0] == 35);
+    assert(b.GetValue()[0] == 128);
+    i64* const val = c.GetValue();
+
+    assert(val[0] == sol);
+    printf("Assertion passed, elements multiplied correctly\n");
+
+}
